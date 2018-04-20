@@ -1,4 +1,6 @@
 import pygame
+from Hero import HERO
+
 
 pygame.init()
 
@@ -21,8 +23,6 @@ clock = pygame.time.Clock()
 size = (SCREENWIDTH,SCREENHEIGHT)
 screen = pygame.display.set_mode(size) #creates the canvase/screen
 pygame.display.set_caption("GUI")      #caption
-
-
 
 
 # ------------ this function is where the buttons will do their stuff --------- #
@@ -116,7 +116,7 @@ def Game():
                 pygame.Quit()
             elif event.type==pygame.KEYDOWN:
                 if event.key==pygame.K_x:
-                    Sart = False
+                    pygame.quit()
 
         # -------- visible items --------- #
         
